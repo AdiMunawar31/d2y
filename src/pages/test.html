@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Minimalist Portfolio | Design &amp; Code</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#141414",
+              "background-light": "#f7f7f7",
+              "background-dark": "#191919",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white dark:bg-zinc-950 text-black dark:text-zinc-100 font-display selection:bg-black selection:text-white"
+  >
+    <!-- Navigation -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-primary/5 bg-white/80 backdrop-blur-md dark:bg-background-dark/80"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10"
+      >
+        <div
+          class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10"
+        >
+          <div class="flex items-center gap-3">
+            <div class="bg-black text-white p-1.5 rounded-sm">
+              <span class="material-symbols-outlined text-xl block"
+                >terminal</span
+              >
+            </div>
+            <h2
+              class="text-xl font-black tracking-tighter text-black dark:text-white uppercase"
+            >
+              Studio
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-12">
+            <a
+              class="text-[11px] font-bold hover:text-black/50 transition-colors uppercase tracking-[0.2em] text-black/70"
+              href="#"
+              >Experience</a
+            >
+            <a
+              class="text-[11px] font-bold hover:text-black/50 transition-colors uppercase tracking-[0.2em] text-black/70"
+              href="#"
+              >Insights</a
+            >
+            <a
+              class="text-[11px] font-bold hover:text-black/50 transition-colors uppercase tracking-[0.2em] text-black/70"
+              href="#"
+              >Store</a
+            >
+            <a
+              class="text-[11px] font-bold hover:text-black/50 transition-colors uppercase tracking-[0.2em] text-black/70"
+              href="#"
+              >Contact</a
+            >
+          </nav>
+          <button
+            class="border-2 border-black text-black px-7 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all"
+          >
+            Collaborate
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="mx-auto max-w-7xl px-6 md:px-10">
+      <!-- Hero Section -->
+      <section
+        class="py-24 md:py-40 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center py-32"
+      >
+        <div class="lg:col-span-7 flex flex-col gap-10">
+          <div
+            class="inline-flex items-center gap-4 text-black/30 uppercase tracking-[0.4em] text-[10px] font-black"
+          >
+            <span class="w-12 h-px bg-black/20"></span>
+            Global Creative Partner
+          </div>
+          <h1
+            class="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter text-black dark:text-white text-balance"
+          >
+            Architecting <br />Digital <br />Excellence.
+          </h1>
+          <p
+            class="text-xl text-black/60 dark:text-white/60 max-w-lg leading-relaxed font-medium"
+          >
+            Engineering high-end digital interfaces where strategic design meets
+            enterprise-grade execution.
+          </p>
+          <div class="flex items-center gap-6 pt-4">
+            <button
+              class="bg-black text-white px-10 py-5 rounded-full text-xs font-black uppercase tracking-[0.2em] flex items-center gap-3 hover:scale-105 transition-transform"
+            >
+              View Case Studies
+              <span class="material-symbols-outlined text-sm">north_east</span>
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-5 relative">
+          <div
+            class="aspect-[3/4] w-full bg-black/5 rounded-3xl overflow-hidden shadow-2xl"
+          >
+            <img
+              class="w-full h-full object-cover grayscale contrast-125 brightness-90 hover:scale-105 transition-transform duration-1000"
+              data-alt="Minimalist high-end architecture detail"
+              src="{{DATA:IMAGE:AB6AXuBHA8WjC9hfBMHPgD0WRGINxsnMGgW_i3IQ5Ew2lY2fPewryyLnj515ZoXD5LTdDLbVRaK3kVGwo9kyaX1-1TQebz9GrfwNa9QnMVVWyY-c1fKHDbV-TVS5lZocbPCVjkQWAjGlxNkDWzAyJ9EbPQtckhgo_ElpwiCC9ODbe1oFWxOMqRnCMj1nplw0FRx4J-WQM-e6KTuJuCPOYV1p-dX4p_iuKQgkF6_k70z_V_VcQFOrVBfzacmZZIK55qmrKUgzGqai-RMP_f0"
+            />
+          </div>
+          <div
+            class="absolute -bottom-6 -left-6 bg-white p-8 rounded-2xl shadow-xl border border-black/5 hidden md:block"
+          >
+            <p
+              class="text-[10px] font-black uppercase tracking-widest text-black/40 mb-1"
+            >
+              Current Project
+            </p>
+            <p class="text-sm font-bold text-black">Lumina OS 2.0</p>
+          </div>
+        </div>
+      </section>
+      <!-- Blog Posts Section -->
+      <section class="border-t border-primary/5 py-32">
+        <div class="flex items-end justify-between mb-16">
+          <div class="flex flex-col gap-3">
+            <span
+              class="text-[10px] font-black uppercase tracking-[0.3em] text-black/30"
+              >Editorial</span
+            >
+            <h2
+              class="text-4xl font-black tracking-tighter text-black dark:text-white"
+            >
+              Latest Perspectives
+            </h2>
+          </div>
+          <a
+            class="text-[11px] font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-black/50 hover:border-black/50 transition-all"
+            href="#"
+            >Archive</a
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[16/10] mb-8 overflow-hidden rounded-2xl bg-black/5 border border-black/5 shadow-sm"
+            >
+              <img
+                class="w-full h-full object-cover grayscale brightness-95 group-hover:scale-110 transition-transform duration-700"
+                src="{{DATA:IMAGE:AB6AXuBUx-VyzPK9xm1_HPLQ430ajZCL8SQMCtQ966dTRjgDjTgjtp1vZU6J78cFQ3D8LdBBIg3acJJ__PnPNkVj5_IHNk-vTm8KGD535DwWiHfKuGgX7vPnIGAnCvwDOvORJdAteoooyn_dhvgufers3xMnYExyD6nrUbrzO0L4S8oQmlDlMknM24bCggwlyw_qEWzSofTCigxTdGHgRHv08ucR73T8bcNRGff1-motrQRM_nM2Ib6pgcrpL97bARA181Sl0Wqoqbjsvrk"
+              />
+            </div>
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="px-2 py-1 rounded bg-black text-white text-[9px] font-black uppercase tracking-widest"
+                >Design</span
+              >
+              <p class="text-[10px] font-bold text-black/40">12.10.23</p>
+            </div>
+            <h3
+              class="text-2xl font-black text-black dark:text-white group-hover:underline decoration-2 underline-offset-4"
+            >
+              The Future of Minimalist UI
+            </h3>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[16/10] mb-8 overflow-hidden rounded-2xl bg-black/5 border border-black/5 shadow-sm"
+            >
+              <img
+                class="w-full h-full object-cover grayscale brightness-95 group-hover:scale-110 transition-transform duration-700"
+                src="{{DATA:IMAGE:AB6AXuCyUK9nAdg2XxlWCvdbY9HLUhJyvMRZR4yMRAtxhj0FxKPaKZzHyBXDmIZ1s9wPILIjDVnvnC79fzeZxVJy7azqa19DMyQMHC1dkxFgud0j3TaHqXezKWrGLImYQQq6j_TyP3jpXUJYAlF6GuC1AHmvrrWAUhtiNVYJ92C1483nkgXp4c3Y3JKREcMq4eAY8hgecggLB99GAqY1Qpq5ohlLVKzPKYPzoHpkWqAG91t1H7OD6OMXS-nWVcRgk1nWFXB-w5K3TlxR8XU"
+              />
+            </div>
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="px-2 py-1 rounded bg-black text-white text-[9px] font-black uppercase tracking-widest"
+                >Process</span
+              >
+              <p class="text-[10px] font-bold text-black/40">28.09.23</p>
+            </div>
+            <h3
+              class="text-2xl font-black text-black dark:text-white group-hover:underline decoration-2 underline-offset-4"
+            >
+              Why Less is More
+            </h3>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[16/10] mb-8 overflow-hidden rounded-2xl bg-black/5 border border-black/5 shadow-sm"
+            >
+              <img
+                class="w-full h-full object-cover grayscale brightness-95 group-hover:scale-110 transition-transform duration-700"
+                src="{{DATA:IMAGE:AB6AXuCv6Pfm5slLJGjpYyXM5UIpYptk0S99GTNv-dvCINi8FN3HArzH4CxyCXZiEwOkRMs46pf-xdeB5hyzQPm_Uf7TN18zt8tLMSgs0ACTD8GxShF4GaAgXR9bQZTc4GP3QGWnCdSX2SjAzzWKePfkerpAMcrp_wMABUQw4l_jDyqTdENl3qsGMSaZOOz1RJu973btQx2XNvOEs-CoE9wY-DC1eHMzisrk_Mv9w1bbbDuDXiZfeFsk9MTFpxzGgPOXS4Xu6eeCm_3S-uA"
+              />
+            </div>
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="px-2 py-1 rounded bg-black text-white text-[9px] font-black uppercase tracking-widest"
+                >Philosophy</span
+              >
+              <p class="text-[10px] font-bold text-black/40">15.08.23</p>
+            </div>
+            <h3
+              class="text-2xl font-black text-black dark:text-white group-hover:underline decoration-2 underline-offset-4"
+            >
+              Mastering Negative Space
+            </h3>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Product Section -->
+      <section class="py-32">
+        <div
+          class="bg-primary rounded-3xl overflow-hidden flex flex-col lg:flex-row items-center"
+        >
+          <div class="w-full lg:w-1/2 p-12 md:p-20 flex flex-col gap-8">
+            <span
+              class="text-[10px] font-bold uppercase tracking-[0.3em] text-white/50"
+              >Shop Spotlight</span
+            >
+            <h2
+              class="text-4xl md:text-5xl font-black text-white leading-tight"
+            >
+              The 2024 Design System Kit
+            </h2>
+            <p class="text-white/70 text-lg leading-relaxed">
+              A comprehensive toolkit for modern designers. 500+ components,
+              fully documented, and ready for production.
+            </p>
+            <div class="flex items-center gap-6">
+              <button
+                class="bg-white text-primary px-8 py-4 rounded-xl text-sm font-black uppercase tracking-widest hover:bg-slate-100 transition-colors"
+              >
+                Buy Now — $49
+              </button>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 h-80 lg:h-auto self-stretch">
+            <div class="w-full h-full bg-slate-200 overflow-hidden relative">
+              <img
+                class="w-full h-full object-cover grayscale contrast-125"
+                data-alt="Modern desk setup with professional design tools"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF4iJEvefjtE4WeTMZBU4X8y7PfRvgl9pwb6HD6u4mTvA-QzIE2JZzJJ4gleL43kOcDbsBIQT87dy4DQwCRIWqBW99NpSJ1wtd5jMcX5SGpXnPmguUFxSi0u_ETU7MKyLe7qvrzEUeXf2ShvwjP19YEC1HEkbYyPOcMdoUDmANUvQpOJEGvA8s5Vp5_84mnZPkUNf81k6kuQ4-F_ZCB2xXjVO0vye_ixrrq28LtuxEOvUaV5jOZvt4bczq_qm21x3-NX61sSbVM_g"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-l from-primary/40 to-transparent"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Snippet -->
+      <section class="border-t border-primary/5 py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div class="flex flex-col gap-6">
+            <h2
+              class="text-3xl font-black tracking-tight text-primary dark:text-slate-100"
+            >
+              About Me
+            </h2>
+            <p
+              class="text-xl leading-relaxed text-slate-600 dark:text-slate-400"
+            >
+              I am a designer and developer focused on crafting clean,
+              purposeful interfaces. My philosophy is rooted in the belief that
+              great design is invisible—it simply works.
+            </p>
+            <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+              With over a decade of experience in digital product design, I help
+              brands bridge the gap between complex engineering and
+              human-centric design.
+            </p>
+            <div
+              class="pt-4 italic font-medium text-primary dark:text-slate-100 flex items-center gap-4"
+            >
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-primary/10">
+                <img
+                  class="w-full h-full object-cover grayscale"
+                  data-alt="Close-up portrait of the designer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdtUQOPaJQ4LqTVRpLI9Ta4V4YTZVDTUn2yI4R_7rbpio3vmnaMoOASdL4LS07LErHWr_7kWCaWm_ASFpKcOSRbhuVZtI6hmPNEtKvOGMS74OzTTvqR2FSYD5lPY-SNaZ8Ipe6oOTCwQFYk3ewkZG_RCSfUARruGB2T8F27kbCmbGRg0MJNxqJwTdOiuRI05N9zxtKepTCoJ9ISBiLkHjyz6G9xS4iGfQTPYMBiwDmk6-8UxwZrHQFdX6SZEFAQ8zqtC0wIvhSeX0"
+                />
+              </div>
+              — Alex Morgan, Creative Lead
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div
+              class="flex flex-col gap-6 p-10 bg-white border border-black/5 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-500"
+            >
+              <div
+                class="w-14 h-14 bg-black/5 rounded-2xl flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-3xl text-black"
+                  >auto_awesome</span
+                >
+              </div>
+              <h4 class="text-xl font-black tracking-tight">
+                Creative Direction
+              </h4>
+              <p class="text-sm text-black/50 leading-relaxed font-medium">
+                We define the visual language for industry-leading brands
+                through rigorous aesthetic research and strategic vision.
+              </p>
+            </div>
+            <div
+              class="flex flex-col gap-6 p-10 bg-white border border-black/5 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-500"
+            >
+              <div
+                class="w-14 h-14 bg-black/5 rounded-2xl flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined text-3xl text-black"
+                  >code</span
+                >
+              </div>
+              <h4 class="text-xl font-black tracking-tight">
+                Technical Execution
+              </h4>
+              <p class="text-sm text-black/50 leading-relaxed font-medium">
+                Bridging the gap between complex engineering and human
+                interfaces with scalable, performant code architectures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-24 pb-12">
+      <div class="mx-auto max-w-7xl px-6 md:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
+          <div class="lg:col-span-4 flex flex-col gap-8">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-3xl">terminal</span>
+              <h2 class="text-2xl font-black tracking-tighter uppercase">
+                Studio
+              </h2>
+            </div>
+            <p class="text-white/50 max-w-xs text-sm leading-relaxed">
+              An independent creative studio working at the intersection of
+              high-end design and enterprise technology.
+            </p>
+            <div class="flex gap-5">
+              <a
+                class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                href="#"
+                ><span class="material-symbols-outlined text-lg"
+                  >public</span
+                ></a
+              >
+              <a
+                class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                href="#"
+                ><span class="material-symbols-outlined text-lg">share</span></a
+              >
+              <a
+                class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                href="#"
+                ><span class="material-symbols-outlined text-lg"
+                  >alternate_email</span
+                ></a
+              >
+            </div>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-6">
+            <h4
+              class="text-xs font-black uppercase tracking-[0.3em] text-white/40"
+            >
+              Capabilities
+            </h4>
+            <ul class="flex flex-col gap-4 text-sm font-bold">
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >Interface Design</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >Design Systems</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >Brand Identity</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >Web Engineering</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-2 flex flex-col gap-6">
+            <h4
+              class="text-xs font-black uppercase tracking-[0.3em] text-white/40"
+            >
+              Company
+            </h4>
+            <ul class="flex flex-col gap-4 text-sm font-bold">
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >About Studio</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >Methodology</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white/60 transition-colors" href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-4 flex flex-col gap-6">
+            <h4
+              class="text-xs font-black uppercase tracking-[0.3em] text-white/40"
+            >
+              Stay Connected
+            </h4>
+            <p class="text-sm text-white/50">
+              Join our monthly brief on design and tech.
+            </p>
+            <form class="flex gap-2">
+              <input
+                class="bg-white/5 border-none rounded-lg px-4 py-3 text-sm w-full focus:ring-1 focus:ring-white transition-all text-white"
+                placeholder="email@address.com"
+                type="email"
+              />
+              <button
+                class="bg-white text-black px-6 py-3 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-white/90 transition-all"
+              >
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <p
+            class="text-[10px] font-bold text-white/30 uppercase tracking-[0.3em]"
+          >
+            © 2024 Studio Minimalist. All Rights Reserved.
+          </p>
+          <div
+            class="flex gap-8 text-[10px] font-bold text-white/30 uppercase tracking-[0.3em]"
+          >
+            <a class="hover:text-white transition-colors" href="#"
+              >Privacy Policy</a
+            >
+            <a class="hover:text-white transition-colors" href="#"
+              >Terms of Service</a
+            >
+            <a class="hover:text-white transition-colors" href="#"
+              >Cookie Settings</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

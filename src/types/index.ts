@@ -30,8 +30,8 @@ export type ChipVariant = "filled" | "outline" | "soft";
 export type { StatusType, RoleType };
 
 // ─── Table ────────────────────────────────────────────────
-export interface TableColumn<T = Record<string, unknown>> {
-  key: string;
+export interface TableColumn<T> {
+  key: keyof T & string;
   label: string;
   sortable?: boolean;
   filterable?: boolean;
