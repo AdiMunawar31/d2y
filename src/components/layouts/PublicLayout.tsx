@@ -44,7 +44,7 @@ function PublicNavbar() {
 
   return (
     <header className="sticky top-0 z-[var(--z-sticky)] bg-[var(--color-background)]/80 backdrop-blur-md border-b border-[var(--color-border)]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center gap-6">
         {/* Logo */}
         <Link
           to={ROUTES.HOME}
@@ -148,7 +148,7 @@ function PublicNavbar() {
 function PublicFooter() {
   return (
     <footer className="bg-black text-white pt-24 pb-12">
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           {/* Brand */}
           <div className="lg:col-span-4 flex flex-col gap-8">
@@ -227,7 +227,7 @@ function PublicFooter() {
             </p>
             <form className="flex gap-2">
               <input
-                className="bg-white/5 border-none rounded-lg px-4 py-3 text-sm w-full focus:ring-1 focus:ring-white transition-all text-white"
+                className="bg-white/5 border border-slate-200 rounded-lg px-4 py-3 text-sm w-full focus:ring-1 focus:ring-white transition-all text-white"
                 placeholder="email@address.com"
                 type="email"
               />

@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
-  Navigate,
+  // Navigate,
   type RouteObject,
 } from "react-router-dom";
 import { ROUTES } from "@/config/routes.config";
@@ -15,7 +15,7 @@ import D2YLoading from "@/components/ui/D2YLoading";
 
 // ─── Lazy Pages ───────────────────────────────────────────
 // Public
-// const HomePage = lazy(() => import("@/pages/HomePage"));
+const HomePage = lazy(() => import("@/pages/HomePage"));
 // const AboutPage = lazy(() => import("@/pages/AboutPage"));
 // const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
 // const PortfolioDetailPage = lazy(() => import("@/pages/PortfolioDetailPage"));
@@ -49,7 +49,7 @@ const ComponentsDemo = lazy(() => import("@/pages/ComponentsDemo"));
 
 // ─── Layouts ──────────────────────────────────────────────
 const PublicLayout = lazy(() => import("@/components/layouts/PublicLayout"));
-const AdminLayout = lazy(() => import("@/components/layouts/AdminLayout"));
+// const AdminLayout = lazy(() => import("@/components/layouts/AdminLayout"));
 const AuthLayout = lazy(() => import("@/components/layouts/AuthLayout"));
 
 // ─── Suspense Wrapper ─────────────────────────────────────
@@ -80,14 +80,14 @@ const routes: RouteObject[] = [
       </PageSuspense>
     ),
     children: [
-      // {
-      //   index: true,
-      //   element: (
-      //     <PageSuspense>
-      //       <HomePage />
-      //     </PageSuspense>
-      //   ),
-      // },
+      {
+        index: true,
+        element: (
+          <PageSuspense>
+            <HomePage />
+          </PageSuspense>
+        ),
+      },
       // {
       //   path: ROUTES.ABOUT,
       //   element: (
