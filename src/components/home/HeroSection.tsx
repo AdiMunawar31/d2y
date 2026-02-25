@@ -23,13 +23,13 @@ function HeroEyebrow() {
 
 function HeroHeadline() {
   return (
-    <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter text-[var(--color-foreground)] text-balance">
+    <span className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter text-[var(--color-foreground)] text-balance">
       {HERO_DATA.headline.map((line, i) => (
         <span key={i} className="block">
           {line}
         </span>
       ))}
-    </h1>
+    </span>
   );
 }
 
@@ -46,7 +46,7 @@ function HeroCTA() {
     <div className="flex items-center gap-6 pt-4  text-primary-foreground">
       <Link
         to={HERO_DATA.cta.primary.href}
-        className="group bg-foreground px-10 py-5 rounded-full text-xs uppercase tracking-[0.2em] flex items-center gap-3 hover:scale-105 transition-transform duration-200"
+        className="group bg-foreground px-10 py-5 rounded-md text-xs uppercase tracking-[0.2em] flex items-center gap-3 hover:scale-105 transition-transform duration-200"
       >
         {HERO_DATA.cta.primary.label}
         <ArrowUpRight

@@ -227,11 +227,11 @@ function PublicFooter() {
             </p>
             <form className="flex gap-2">
               <input
-                className="bg-white/5 border border-slate-200 rounded-lg px-4 py-3 text-sm w-full focus:ring-1 focus:ring-white transition-all text-white"
+                className="bg-white/5 border border-slate-200 rounded-md px-4 py-3 text-sm w-full focus:ring-1 focus:ring-white transition-all text-white"
                 placeholder="email@address.com"
                 type="email"
               />
-              <button className="bg-white text-black px-6 py-3 rounded-lg text-[10px] font-black uppercase tracking-widest hover:bg-white/90 transition-all">
+              <button className="bg-white text-black px-6 py-3 rounded-md text-[10px] font-black uppercase tracking-widest hover:bg-white/90 transition-all">
                 Join
               </button>
             </form>

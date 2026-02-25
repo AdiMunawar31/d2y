@@ -8,7 +8,7 @@ export const HERO_DATA = {
   subtext:
     "Engineering high-end digital interfaces where strategic design meets enterprise-grade execution.",
   cta: {
-    primary: { label: "View Case Studies", href: "/portfolio" },
+    primary: { label: "View Case Studies", href: "/about" },
   },
   currentProject: {
     label: "Current Project",

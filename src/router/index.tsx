@@ -16,7 +16,7 @@ import D2YLoading from "@/components/ui/D2YLoading";
 // ─── Lazy Pages ───────────────────────────────────────────
 // Public
 const HomePage = lazy(() => import("@/pages/HomePage"));
-// const AboutPage = lazy(() => import("@/pages/AboutPage"));
+const AboutPage = lazy(() => import("@/pages/AboutPage"));
 // const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
 // const PortfolioDetailPage = lazy(() => import("@/pages/PortfolioDetailPage"));
 // const ContactPage = lazy(() => import("@/pages/ContactPage"));
@@ -88,14 +88,14 @@ const routes: RouteObject[] = [
           </PageSuspense>
         ),
       },
-      // {
-      //   path: ROUTES.ABOUT,
-      //   element: (
-      //     <PageSuspense>
-      //       <AboutPage />
-      //     </PageSuspense>
-      //   ),
-      // },
+      {
+        path: ROUTES.ABOUT,
+        element: (
+          <PageSuspense>
+            <AboutPage />
+          </PageSuspense>
+        ),
+      },
       // {
       //   path: ROUTES.PORTFOLIO,
       //   element: (

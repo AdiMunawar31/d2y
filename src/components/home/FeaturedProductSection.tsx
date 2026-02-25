@@ -16,9 +16,9 @@ function ProductCopy() {
         {FEATURED_PRODUCT.eyebrow}
       </span>
 
-      <p className="text-4xl md:text-5xl font-bold text-white">
+      <span className="text-4xl md:text-7xl font-bold text-white">
         {FEATURED_PRODUCT.title}
-      </p>
+      </span>
 
       <p className="text-[var(--color-background)]/70 text-lg leading-relaxed">
         {FEATURED_PRODUCT.description}
