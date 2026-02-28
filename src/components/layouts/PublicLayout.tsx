@@ -24,6 +24,7 @@ const NAV_LINKS = [
   { label: "About", href: ROUTES.ABOUT },
   { label: "Portfolio", href: ROUTES.PORTFOLIO },
   { label: "Blog", href: ROUTES.BLOG },
+  { label: "Store", href: ROUTES.STORE },
   { label: "Contact", href: ROUTES.CONTACT },
 ];
 

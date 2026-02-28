@@ -11,6 +11,7 @@ export const ROUTES = {
   CONTACT: "/contact",
   BLOG: "/blog",
   BLOG_DETAIL: "/blog/:slug",
+  STORE: "/shop",
 
   // Auth
   LOGIN: "/login",
