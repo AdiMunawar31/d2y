@@ -901,7 +901,6 @@ export default function ComponentsDemo() {
                             key={s}
                             label={s.toUpperCase()}
                             checked
-                            size={s}
                             onChange={() => {}}
                           />
                         ))}

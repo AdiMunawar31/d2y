@@ -2,26 +2,23 @@
 // PublicLayout — Public website layout
 // ============================================================
 
-import { useState, type ReactNode } from "react";
-import { Link, useLocation } from "react-router-dom";
-import {
-  Menu,
-  X,
-  Moon,
-  Sun,
-  ArrowUpRight,
-  Github,
-  Twitter,
-  Linkedin,
-  Terminal,
-  Globe,
-  Share2,
-  AtSign,
-} from "lucide-react";
-import { cn } from "@/utils";
+import D2YButton from "@/components/ui/D2YButton";
 import { ROUTES } from "@/config/routes.config";
 import { useTheme } from "@/hooks/useThemes";
-import D2YButton from "@/components/ui/D2YButton";
+import { cn } from "@/utils";
+import {
+  ArrowUpRight,
+  AtSign,
+  Globe,
+  Menu,
+  Moon,
+  Share2,
+  Sun,
+  Terminal,
+  X,
+} from "lucide-react";
+import { useState, type ReactNode } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const NAV_LINKS = [
   { label: "About", href: ROUTES.ABOUT },
@@ -30,11 +27,11 @@ const NAV_LINKS = [
   { label: "Contact", href: ROUTES.CONTACT },
 ];
 
-const SOCIAL = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-];
+// const SOCIAL = [
+//   { icon: Github, href: "https://github.com", label: "GitHub" },
+//   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+//   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+// ];
 
 // ─── Navbar ───────────────────────────────────────────────
 function PublicNavbar() {
