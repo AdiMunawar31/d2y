@@ -21,7 +21,7 @@ const PortfolioPage = lazy(() => import("@/pages/PortfolioPage"));
 const PortfolioDetailPage = lazy(() => import("@/pages/PortfolioDetailPage"));
 // const ContactPage = lazy(() => import("@/pages/ContactPage"));
 const BlogPage = lazy(() => import("@/pages/BlogPage"));
-// const BlogDetailPage = lazy(() => import("@/pages/BlogDetailPage"));
+const BlogDetailPage = lazy(() => import("@/pages/BlogDetailPage"));
 
 // Auth
 // const LoginPage = lazy(() => import("@/pages/auth/LoginPage"));
@@ -128,14 +128,14 @@ const routes: RouteObject[] = [
           </PageSuspense>
         ),
       },
-      // {
-      //   path: ROUTES.BLOG_DETAIL,
-      //   element: (
-      //     <PageSuspense>
-      //       <BlogDetailPage />
-      //     </PageSuspense>
-      //   ),
-      // },
+      {
+        path: ROUTES.BLOG_DETAIL,
+        element: (
+          <PageSuspense>
+            <BlogDetailPage />
+          </PageSuspense>
+        ),
+      },
     ],
   },
 
