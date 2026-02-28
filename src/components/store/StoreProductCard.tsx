@@ -7,6 +7,7 @@ import { useToast } from "@/components/ui";
 import { D2YImage } from "@/components/ui";
 import { cn } from "@/utils";
 import type { StoreProduct } from "@/data/store.data";
+import { Link } from "react-router-dom";
 
 interface StoreProductCardProps {
   product: StoreProduct;
@@ -22,14 +23,23 @@ function ProductBadge({ label }: { label: string }) {
   );
 }
 
-function QuickViewOverlay({ soldOut }: { soldOut?: boolean }) {
+function QuickViewOverlay({
+  soldOut,
+  slug,
+}: {
+  soldOut?: boolean;
+  slug?: string;
+}) {
   if (soldOut) return null;
   return (
-    <div className="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+    <Link
+      to={`/shop/${slug}`}
+      className="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+    >
       <div className="bg-background/90 backdrop-blur-sm px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-foreground">
         Quick View
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -87,7 +97,6 @@ function AddToCartButton({ product }: { product: StoreProduct }) {
 export default function StoreProductCard({ product }: StoreProductCardProps) {
   return (
     <div className="group">
-      {/* Image container */}
       <div className="relative aspect-3/4 bg-background border border-border overflow-hidden rounded">
         {product.badge && <ProductBadge label={product.badge} />}
         <D2YImage
@@ -101,10 +110,9 @@ export default function StoreProductCard({ product }: StoreProductCardProps) {
           )}
           wrapperClassName="w-full h-full"
         />
-        <QuickViewOverlay soldOut={product.soldOut} />
+        <QuickViewOverlay soldOut={product.soldOut} slug={product.slug} />
       </div>
 
-      {/* Info */}
       <div className="mt-6 flex flex-col gap-1">
         <ProductInfo product={product} />
         <p className="text-[11px] text-muted-foreground uppercase tracking-wider mb-4">

@@ -23,6 +23,7 @@ const PortfolioDetailPage = lazy(() => import("@/pages/PortfolioDetailPage"));
 const BlogPage = lazy(() => import("@/pages/BlogPage"));
 const BlogDetailPage = lazy(() => import("@/pages/BlogDetailPage"));
 const StorePage = lazy(() => import("@/pages/StorePage"));
+const StoreDetailPage = lazy(() => import("@/pages/StoreDetailPage"));
 
 // Auth
 // const LoginPage = lazy(() => import("@/pages/auth/LoginPage"));
@@ -49,8 +50,8 @@ const StorePage = lazy(() => import("@/pages/StorePage"));
 const ComponentsDemo = lazy(() => import("@/pages/ComponentsDemo"));
 
 // ─── Layouts ──────────────────────────────────────────────
-const PublicLayout = lazy(() => import("@/components/layouts/PublicLayout"));
 // const AdminLayout = lazy(() => import("@/components/layouts/AdminLayout"));
+const PublicLayout = lazy(() => import("@/components/layouts/PublicLayout"));
 const AuthLayout = lazy(() => import("@/components/layouts/AuthLayout"));
 
 // ─── Suspense Wrapper ─────────────────────────────────────
@@ -142,6 +143,14 @@ const routes: RouteObject[] = [
         element: (
           <PageSuspense>
             <StorePage />
+          </PageSuspense>
+        ),
+      },
+      {
+        path: ROUTES.STORE_DETAIL,
+        element: (
+          <PageSuspense>
+            <StoreDetailPage />
           </PageSuspense>
         ),
       },

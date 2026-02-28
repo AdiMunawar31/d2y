@@ -12,6 +12,7 @@ export const ROUTES = {
   BLOG: "/blog",
   BLOG_DETAIL: "/blog/:slug",
   STORE: "/shop",
+  STORE_DETAIL: "/shop/:slug",
 
   // Auth
   LOGIN: "/login",
