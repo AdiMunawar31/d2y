@@ -41,22 +41,22 @@ export default function PortfolioProjectCard({
   project,
 }: PortfolioProjectCardProps) {
   return (
-    <article className="group relative overflow-hidden rounded bg-surface cursor-pointer">
-      {/* Image */}
-      <div className="aspect-4/5 overflow-hidden">
-        <D2YImage
-          src={project.image.src}
-          alt={project.image.alt}
-          aspectRatio="auto"
-          objectFit="cover"
-          rounded="none"
-          className="grayscale w-full h-full group-hover:scale-105 transition-transform duration-700"
-          wrapperClassName="w-full h-full"
-        />
-      </div>
+    <Link to={`/portfolio/${project.slug}`}>
+      <article className="group relative overflow-hidden rounded bg-surface cursor-pointer">
+        <div className="aspect-4/5 overflow-hidden">
+          <D2YImage
+            src={project.image.src}
+            alt={project.image.alt}
+            aspectRatio="auto"
+            objectFit="cover"
+            rounded="none"
+            className="grayscale w-full h-full group-hover:scale-105 transition-transform duration-700"
+            wrapperClassName="w-full h-full"
+          />
+        </div>
 
-      {/* Hover overlay */}
-      <CardOverlay project={project} />
-    </article>
+        <CardOverlay project={project} />
+      </article>
+    </Link>
   );
 }
