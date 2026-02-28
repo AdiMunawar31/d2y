@@ -94,7 +94,7 @@ const textareaSizeStyles = {
 const baseInputStyles = cn(
   "w-full rounded-[var(--radius-md)] border border-[var(--color-border)]",
   "bg-[var(--color-input)] text-foreground",
-  "placeholder:text-foreground",
+  "placeholder:text-muted-foreground",
   "transition-all duration-150",
   "focus:outline-none focus:ring-2 focus:ring-[var(--color-ring)] focus:ring-offset-0 focus:border-foreground",
   "disabled:opacity-50 disabled:cursor-not-allowed",
